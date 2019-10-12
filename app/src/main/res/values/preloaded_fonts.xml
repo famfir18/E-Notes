@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/aclonica</item>
+        <item>@font/bad_script</item>
+        <item>@font/courgette</item>
+        <item>@font/englebert</item>
+        <item>@font/lovers_quarrel</item>
+        <item>@font/playball</item>
+        <item>@font/pompiere</item>
+        <item>@font/vibur</item>
+        <item>@font/zeyada</item>
+    </array>
+</resources>

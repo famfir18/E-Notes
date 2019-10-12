@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "566053690441",
+    "firebase_url": "https://enotes-cd963.firebaseio.com",
+    "project_id": "enotes-cd963",
+    "storage_bucket": "enotes-cd963.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566053690441:android:8e1c41462df54ec8293398",
+        "android_client_info": {
+          "package_name": "com.faisal.e_notes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566053690441-1oihgmcr1r57pkncfq0d6iufjekncquc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.faisal.e_notes",
+            "certificate_hash": "9ba516a04c987aaaa2b85f35b3f03ae5d1115910"
+          }
+        },
+        {
+          "client_id": "566053690441-1h5d2pcedqa3vfb55d879s2r9ui3ltnv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvYrHPjYEtpAk2M-M-SlJsaiK3T4djo4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566053690441-1h5d2pcedqa3vfb55d879s2r9ui3ltnv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
