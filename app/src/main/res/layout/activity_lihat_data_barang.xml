@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LihatDataBarang">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:theme="@style/Toolbar"
+        android:gravity="center"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/toolbar_text"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Lihat Data Barang"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/shadeerah"
+            android:layout_gravity="center"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
