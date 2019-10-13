@@ -55,6 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Nama Barang"
+                android:fontFamily="@font/shadeerah"
                 android:inputType="textCapWords" />
 
         </android.support.design.widget.TextInputLayout>
@@ -71,6 +72,7 @@
                 style="@style/MyEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:fontFamily="@font/shadeerah"
                 android:hint="Jumlah Barang"
                 android:inputType="textCapWords" />
 
@@ -89,6 +91,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Pemasok"
+                android:fontFamily="@font/shadeerah"
                 android:inputType="textCapWords" />
 
         </android.support.design.widget.TextInputLayout>
@@ -105,6 +108,7 @@
                 style="@style/MyEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:fontFamily="@font/shadeerah"
                 android:hint="Tanggal"
                 android:inputType="textCapWords" />
 
@@ -116,6 +120,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Submit"
+            android:fontFamily="@font/shadeerah"
             android:textSize="14sp"
             android:layout_marginTop="24dp"/>
     </LinearLayout>
