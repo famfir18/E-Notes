@@ -1,7 +1,9 @@
 package com.faisal.e_notes;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -34,10 +36,19 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.cardInput)
     void clickInput(View v){
+        String txtUsername = getIntent().getStringExtra("username");
+        String txtPassword = getIntent().getStringExtra("password");
+
+        if (txtUsername.equals("FAMFIR") & txtPassword.equals("faisalamirul")){
+            Intent i = new Intent(MainActivity.this, InputDataBarang.class);
+            startActivity(i);
+        }else{
+            Toast.makeText(MainActivity.this, "Anda tidak dapat menginput data", Toast.LENGTH_SHORT).show();
+        }
+
         Animation animScalein = AnimationUtils.loadAnimation(this, R.anim.anim_scale_in);
         v.startAnimation(animScalein);
-        Intent i = new Intent(MainActivity.this, InputDataBarang.class);
-        startActivity(i);
+
     }
 
     @OnClick(R.id.cardLihatData)
@@ -92,25 +103,7 @@ public class MainActivity extends AppCompatActivity {
         layoutMail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                    String[] TO = {"famfir_@hotmail.com"};
-                    Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                    emailIntent.setData(Uri.parse("mailto:" + TO));
-                    emailIntent.setType("text/plain");
-
-
-                    emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
-                    emailIntent.putExtra(Intent.EXTRA_SUBJECT, "New Opportunity");
-                    emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message goes here");
-
-                    try {
-                        startActivity(Intent.createChooser(emailIntent, "Send mail..."));
-                        finish();
-                        Toast.makeText(MainActivity.this,"Sending Email...", Toast.LENGTH_SHORT).show();
-                    } catch (android.content.ActivityNotFoundException ex) {
-                        Toast.makeText(MainActivity.this,
-                                "There is no email client installed.", Toast.LENGTH_SHORT).show();
-                }
+                Toast.makeText(MainActivity.this, "Email : famfir_@hotmail.com", Toast.LENGTH_LONG).show();
             }
         });
         popUpAbout.show();
@@ -122,5 +115,23 @@ public class MainActivity extends AppCompatActivity {
         v.startAnimation(animScalein);
         Intent i = new Intent(MainActivity.this, LoginActivity.class);
         startActivity(i);
+    }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(R.drawable.icon)
+                .setTitle("Exit")
+                .setMessage("Anda ingin keluar aplikasi?")
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+
+                })
+                .setNegativeButton("Tidak", null)
+                .show();
     }
 }
